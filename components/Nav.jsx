@@ -5,8 +5,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FiMenu, FiX } from 'react-icons/fi';
-
-import logo1 from '@/public/logo1.svg';
+import { RxCrumpledPaper } from "react-icons/rx";
 
 export const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,8 +16,9 @@ export const Nav = () => {
         <div className="container mx-auto flex justify-between items-center p-4">
           {/* Logo */}
           {!isOpen && (
-            <Link href="/">
-              <Image src={logo1} alt="Policy CTRL Logo" width={100} height={100} style={{ cursor: 'pointer' }} />
+            <Link href="/" className='flex flex-row gap-2'>
+                WhichMeme
+              <RxCrumpledPaper className='mt-1' />
             </Link>
           )}
 
@@ -33,8 +33,8 @@ export const Nav = () => {
 
           {/* Navigation Links */}
           <ul className={`md:flex ${isOpen ? 'flex flex-col mr-24 gap-2 ' : 'hidden'} md:flex-row gap-4`}>
-            <li><Link href="/about"><span className="hover:text-blue-500" onClick={() => setIsOpen(false)}>About Us</span></Link></li>
-            <li><Link href="/submit-meme"><span className="hover:text-blue-500" onClick={() => setIsOpen(false)}>About Us</span></Link></li>
+            <li><Link href="/about"><span className="nav-hov" onClick={() => setIsOpen(false)}>About Us</span></Link></li>
+            <li><Link href="/submit-meme"><span className="nav-hov" onClick={() => setIsOpen(false)}>Submit Meme</span></Link></li>
           </ul>
         </div>
       </nav>

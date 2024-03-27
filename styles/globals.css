@@ -25,3 +25,23 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.nav-hov {
+  @apply relative;
+  overflow: hidden;
+}
+
+.nav-hov::after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: -2px; 
+  width: 0;
+  height: 2px;
+  background-color: #3b82f6; 
+  transition: all ease-in-out 250ms;
+}
+
+.nav-hov:hover::after {
+  width: 100%;
+}
