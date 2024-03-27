@@ -12,11 +12,11 @@ export const Nav = () => {
 
   return (
     <div>
-      <nav className="bg-white border-b border-gray-200 text-black top-0">
+      <nav className="bg-violet-100 border-b border-gray-200 text-black top-0">
         <div className="container mx-auto flex justify-between items-center p-4">
           {/* Logo */}
           {!isOpen && (
-            <Link href="/" className='flex flex-row gap-2'>
+            <Link href="/" className='flex flex-row gap-2 font-bold text-xl'>
                 WhichMeme
               <RxCrumpledPaper className='mt-1' />
             </Link>
@@ -33,8 +33,8 @@ export const Nav = () => {
 
           {/* Navigation Links */}
           <ul className={`md:flex ${isOpen ? 'flex flex-col mr-24 gap-2 ' : 'hidden'} md:flex-row gap-4`}>
-            <li><Link href="/about"><span className="nav-hov" onClick={() => setIsOpen(false)}>About Us</span></Link></li>
-            <li><Link href="/submit-meme"><span className="nav-hov" onClick={() => setIsOpen(false)}>Submit Meme</span></Link></li>
+            <li><Link href="/about"><span className="nav-hov" onClick={() => setIsOpen(false)}>About</span></Link></li>
+            <li><Link href="/submit-meme"><span className="nav-hov" onClick={() => setIsOpen(false)}>Submit a Meme</span></Link></li>
           </ul>
         </div>
       </nav>

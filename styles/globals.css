@@ -16,14 +16,13 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.gradient {
+  background-image: linear-gradient(to right, #435DB1, #1B1525);
+  /* Other styles like width, height, etc., can be added as needed */
+}
+
+.center-div{
+  @apply flex justify-center items-center;
 }
 
 .nav-hov {
