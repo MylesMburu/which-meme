@@ -7,7 +7,7 @@ export default function Home() {
     <div >
       <Nav/>
 
-      <div className='gradient text-white center-div flex-col gap-4 min-h-screen'>
+      <div className='gradient text-white center-div flex-col gap-4 min-h-screen pt-32'>
         
         <div className='text-center my-8 px-2'>
         <h1 className='text-2xl font-bold'>If you know it, then it's probably here</h1>

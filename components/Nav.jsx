@@ -12,7 +12,7 @@ export const Nav = () => {
 
   return (
     <div>
-      <nav className="bg-violet-100 border-b border-gray-200 text-black top-0">
+      <nav className="bg-violet-100 border-b border-gray-200 text-black top-0 fixed w-full">
         <div className="container mx-auto flex justify-between items-center p-4">
           {/* Logo */}
           {!isOpen && (
