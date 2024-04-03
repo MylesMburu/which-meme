@@ -11,7 +11,6 @@ const MemeSchema = new mongoose.Schema({
     },
     s3Url:{
         type: String,
-        required: true,
     },
     thumbnail: {
         type: Buffer,
@@ -24,4 +23,6 @@ const MemeSchema = new mongoose.Schema({
 
 });
 
-const MemeModel = mongoose.models.Meme || mongoose.model('Meme', MemeSchema);
+const Meme = mongoose.models.Meme || mongoose.model('Meme', MemeSchema);
+
+export default Meme;

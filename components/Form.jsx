@@ -1,3 +1,5 @@
+'use client'
+
 import {useState, useEffect} from 'react'
 
 export const Form = () => {
@@ -7,7 +9,7 @@ export const Form = () => {
 
   const addMeme = async (e) => {
     e.preventDefault();
-    const res = await fetch('/api/memes', {
+    const res = await fetch('/api/new-meme', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -40,7 +42,7 @@ export const Form = () => {
             />
             <button 
             className='bg-black text-white p-2 rounded-lg'
-            onClick={(e) =>{}}
+            onClick={(e) => addMeme(e)}
             >
                 Add
             </button>
