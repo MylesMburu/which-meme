@@ -17,7 +17,7 @@ export async function POST(request){
         upload.single('thumbnail')(request, null, async (err) => {
             if (err) {
                 // handle multer errors here, e.g., file too large, incorrect format, etc.
-                return new Response(JSON.stringify({ message: 'Error processing thumbnail', error: err }, { status: 500 }));
+                return NextResponse.json({ message: 'Error processing thumbnail', error: err }, { status: 500 });
             }
 
             // request.file contains the thumbnail file
@@ -34,10 +34,10 @@ export async function POST(request){
             await newMeme.save();
 
             // send a response
-            return new Response(JSON.stringify({ message: 'Meme added successfully' }, { status: 200 }));
+            return NextResponse.json({ message: 'Meme added successfully' }, { status: 200 });
         });
         
     } catch (error) {
-        return new Response(JSON.stringify({ message: 'An error occurred while adding the meme', error: error }, { status: 500 }));
+        return NextResponse.json({ message: 'An error occurred while adding the meme', error: error }, { status: 500 });
     }
 }
